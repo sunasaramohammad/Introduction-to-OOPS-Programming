@@ -8,20 +8,21 @@ int main()
 {
     string songname;
 
-    cout<< "Enter a song name : ";
-    getline(cin, songname);
+    cout<<"Enter a song name : "<<endl;
+
+    getline(cin,songname);
 
     ofstream file("my_fav_songs.txt", ios::app);
-    if(file.is_open())
-    {
-        file<< songname<<endl;
+
+    if(file.is_open()){
+
+        file<<songname<<endl;
         file.close();
     
-        cout<<"Songs Added Successfully."<<endl;   
-    }
+        cout<<"Songs Added Successfully."<<endl;
 
-    else
-    {
+    }
+    else{
         cout<<"Error Opening file!"<<endl;
     }
 
